@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="LandingPage.css">
+    
+</head>
+<body>
+    <div class="background-img">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/34d05n118d24/los-angeles/?unit=us" data-label_1="LOS ANGELES" data-label_2="WEATHER" data-theme="dark" >LOS ANGELES WEATHER</a>
+<script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+</script>
+    <div class="main-wrapper">
+        <aside class="to-do-list">
+                <h2>My Tasks For Today</h2>
+                <input id="newItem" placeholder="Add New Task" type="text">
+                <button class="list-btn" onclick="add()">Add Item</button>
+                <ul id="myUl"></ul>
+            </aside>
+            <main>
+    <div id="time"></div>
+    <h1>
+        <span id="greeting"></span>
+        <span id="name" contenteditable="true" data-ph="[Enter Your Name]"></span>
+    </h1> 
+    <h2>
+        What is Your Focus Today?
+    </h2>
+    <h2 id="focus" contenteditable="true" data-ph="[Enter Your Focus]"></h2>
+    </h2>
+    <div class="search-bar">Search For An Adventure or Just Ask A Question!
+        <form action="https://www.google.com/search" class="searchform" method="get" name="searchform" target="_blank">
+            <input autocomplete="on" class="form-control search" name="q" placeholder="Search Google" required="required" type="text">
+            <button class="button" type="submit"><img class="search-icon" src="searchicon.png" alt="Search"></button>
+        </form>
+    </div>
+    </main>
+    </div>
+    <script src="to-do-list.js"></script>
+    <script src="LandingPg.js"></script>
+    
+</div>
+</body>
+</html>

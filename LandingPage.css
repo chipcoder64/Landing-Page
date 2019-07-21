@@ -1,0 +1,157 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: black;
+    background-color: black;
+    }
+
+.main-wrapper{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.background-img{
+    background-repeat: no-repeat; 
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.to-do-list{
+    padding-right: 30px;
+    border-right: 3px solid white;
+    text-shadow: rgb(146, 127, 255) 0 0 50px, black 0px 0px 40px;
+    font-size: 1.7rem;
+}
+
+.checked{
+    text-decoration: line-through;
+}
+
+.completeTask:before{
+    content: "This Task Is Complete";
+}
+ul li{
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin: 5px 0 5px 20px;
+}
+
+ul li:nth-child(even) {
+    background: rgba(66, 185, 244, .7);
+    border-radius: 25px;
+}
+
+ul li:nth-child(odd) {
+    background: rgba(110, 66, 244, .7);
+    border-radius: 25px;
+}
+
+li button{
+    height: 35px;
+    width: 70px;
+    margin: 10px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+#newItem{
+    height: 35px;
+    width: 20vw;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-left: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.list-btn{
+    position: relative;
+    right: 5px;
+    bottom: 2px;
+    height: 35px;
+    width: 90px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: mediumslateblue;
+    color: white;
+    font-weight: 700;
+}
+
+#time{
+    font-size: 8rem;
+    margin: 25px;
+}
+
+[contentEditable=true]:empty:not(:focus):before{
+    content:attr(data-ph);/*gives placeholder for contenteditabe*/
+}
+
+h1{
+    margin-bottom: 3rem;
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+.text::after{
+    display: block;
+    content: " This task is complete."
+}
+h2{
+    margin: 0.5rem;
+    opacity: 0.9;
+}
+.search-bar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+    margin-top: 20px;
+}
+.form-control{
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    width: 30vw;
+    height: 35px;
+    padding-left: 15px;
+    font-size: 1.3rem;
+}
+.button{
+    position: relative;
+    top: 2px;
+    right: 4px;
+    height: 35px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: dodgerblue; 
+    width: 40px;
+
+}
+.search-icon{
+    height: 20px;
+}
+@media (max-width: 700px){
+    #time{
+        font-size: 6rem;
+    }
+    .main-wrapper{
+        flex-direction: column-reverse;
+        margin-top: 100px;
+    }
+    .to-do-list{
+        border-right: none;
+    }
+}
